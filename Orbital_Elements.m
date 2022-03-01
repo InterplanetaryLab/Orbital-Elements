@@ -1,4 +1,5 @@
-%% Orbital Elements Calculator; Chandler Hutchens 
+%% Orbital Elements Calculator
+% Created by Chandler Hutchens
 
 format compact ;
 format long ;
