@@ -45,7 +45,7 @@ magn = norm(n) ; % Magnitude of n
 
 e = (1/mu)*cross(v,h) - (r/magr) ; % Eccentricity 
 mage = norm(e) ; % Magnitude of Eccentricty
-fprintf('Confirmation: Eccentricity (e) = %.5f degrees \n', mage)
+fprintf('Confirmation: Eccentricity (e) = %.5f \n', mage)
 
 E = magv^2/2 - (mu/magr) ; % Total Energy
 
@@ -84,12 +84,12 @@ fo1 = acosd((dot(r,e)/(magr*mage))) ; % True Anamomly
 
 fprintf('True Anamomly (f) = %.5f degrees \n', fo1)
 
-fo = fo1*(180/2*pi) ; % Convert to radians for E
+fo = fo1*(180/pi) ; % Convert to radians for E
 
 Eo1 = 2*atan((sqrt((1-mage)/(1+mage)))*tan(fo/2)) ; % Eccentric anomaly 
-Eo = Eo1*(2*pi/180) ;
+Eo = Eo1*(pi/180) ;
 fprintf('Eccentric Anamomly (E) = %.5f degrees \n', Eo)
 
 Mo1 = Eo - mage*sin(Eo) ; % Mean anomaly 
-Mo = Mo1*(2*pi/180) ;
+Mo = Mo1*(pi/180) ;
 fprintf('Mean Anamomly (M) = %.5f degrees \n', Mo)
